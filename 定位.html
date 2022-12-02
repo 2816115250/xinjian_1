@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+
+            width: 100px;
+            height: 100px;
+        }
+        .red{
+            background-color: red;
+        }
+        .blue{
+            /* position: static;
+            position: absolute;
+            top: 40px;
+            left: 40px; */
+            background-color: blue;
+        }
+        .green{
+            background-color: green;
+            /* position: relative;
+            top: 20px;
+            left: 20px; */
+        }
+        .father{
+            /* 相对定位 */
+            position: relative;
+            background-color: black;
+            width: 400px;
+            height: 400px;
+        }
+        .son{
+            
+            background-color: skyblue;
+            width: 200px;
+            height: 200px;
+        }
+        .sun{
+            background-color: orange;
+            /* 绝对定位 */
+            position: absolute;
+            right:0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 静态定位 position：static -->
+    <!-- 相对定位 relative 是相对自己的位置进行偏移  -->
+    <!-- 绝对定位  absolute  相对于最近的有定位的位置偏移 -->
+    <!-- 子绝父相对网页的影响最小 -->
+    <!-- 子盒子走父盒子一半left：50% -->
+    <!-- transform:translateX(-50%) -->
+    <!-- 固定定位position：fixed； --> 
+    <!-- 更改定位元素的层级z-index:数字 ;数字越大元素层次越高 -->
+    <!-- 浏览器文字类型元素排版中存在用于对齐的基线baseline -->
+    <!-- 垂直对齐方式vertical-align: ;1.可以解决文本框和表单按钮无法对齐问题 -->
+    <!-- 2.可以解决input与img对齐的问题 -->
+    <!-- 3.解决div中的文本框无法贴顶的问题 -->
+    <!-- 4.解决div不设置高度由img标签撑开，此时img标签下面会纯在额外间隙问题 -->
+    <!-- 5.使用line-height让img标签垂直居中问题 -->
+    <!-- 光标类型 cursor -->
+    <!-- 边框圆角border-radius -->
+    <!-- 溢出部分显示属性名overflow -->
+    <!-- 元素本身隐藏visibility:hidden隐藏元素本身在网页中占位置，display:none隐藏元素本身在网页不占位置 -->
+    
+    <div class="red"></div>
+<div class="green"></div>
+<div class="blue"></div>
+<div class="father">
+ <div class="son">
+    <div class="sun"></div>
+ </div>
+</div>
+</body>
+<!-- 光标类型24 -->
+</html>

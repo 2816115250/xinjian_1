@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father
+        {
+            width: 400px;
+            background-color: red;
+        }
+        .son
+        {
+            float:left;
+            width: 100px;
+            height: 400px;
+            background-color: blue;        }
+        .clear
+        {
+            clear: both;
+        }    
+        .father1{
+            width: 400px;
+            background-color: pink;
+        }
+        .son1{
+            float: left;
+            width:200px;
+            height: 400px;
+            background-color:green;
+        }
+        /* 单伪元素清除浮动 清除多个浮动元素clearfix */
+        .clearfix::after{
+            content: '.';
+            display: block;
+            clear:both;
+            /* 补充代码，在网页中看不到伪元素 */
+            height: 0;
+            visibility: hidden;
+        }
+        .father2{
+            width: 400px;
+            background-color: black;
+        }
+        .son2{
+            float: left;
+            width: 100px;
+            height: 400px;
+            background-color: orange;
+        }
+        /* 双伪元素清除浮动 此代码还能清除margin塌陷问题*/
+        .clearfix::before,
+        .clearfix::after{
+            content: '';
+            display: table;    
+            }
+            .clearfix::after{
+                clear:both;
+            }
+            .father4{
+                width: 400px;
+                background-color: black;
+                overflow: hidden;
+            }
+            .son4{
+                float: left;
+                width: 150px;
+                height: 400px;
+                background-color: rgb(22, 192, 51);
+            }
+            .father5{
+                /* 1.吧father盒子转换成BFC盒子，解除：清除浮动 */
+                /* 将父元素转变成BFC盒子可以解决margin塌陷 */
+                /* float: left; */
+                /* display: inline-block; */
+                overflow: hidden;
+                width: 400px;
+                background-color: red;
+            }
+            .son5{
+                width: 90px;
+                height: 400px;
+                background-color: blue;
+                float: left;
+            }
+            .red{
+                background-color: red;
+                width: 200px;
+                height: 200px;
+            }
+            .blue{
+                /* 设置定位方式 */
+                position: absolute;
+                /* 设置偏移值 */
+                 
+                left: 100px;
+                background-color: blue;
+                width: 200px;
+                height: 200px;
+            }
+  </style>
+</head>
+<body>
+    <!-- 1.清除浮动额外标签法 clear:both -->
+    <div class="father">
+        <div class="son"></div>
+        <div class="clear"></div>
+    </div>
+    <!--2. 单伪元素清除法,用伪元素替代了额外标签 -->
+    <div class="father1 clearfix">
+        <div class="son1"></div>
+    </div>
+    <!--3. 双伪元素清除浮动元素的方法 -->
+    <div class="father2 clearfix">
+        <div class="son2"></div>
+    </div>
+    <!-- 4.给父元素设置overflow-hidden -->
+    <div class="father4">
+        <div class="son4"></div>
+    </div>
+    <div class="father5">
+        <div class="son5"></div>
+    </div>
+    <!-- postion定位的基本使用 ,让blue覆盖red-->
+    <div><div class="red"></div>
+    <div class="blue"></div></div>
+</body>
+</html>

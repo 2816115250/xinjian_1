@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .father{
+        width: 400px;
+        height: 400px;
+        background-color: black;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            /* 让元素本身隐藏 */
+            display: none;
+        }
+        .father:hover .son{
+            /* 元素本身显示 */
+            display: block;
+        }
+        table{
+            width: 400px;
+            height: 400px;
+            border:1px solid #000;
+            border-collapse: collapse;
+        }
+        th,td{
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <!-- 元素整体(包括内容)透明度opacity -->
+    <!-- 边框合并让相邻的边框进行和并border-collapse：collapse； -->
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <table >
+        <caption><h3>qwerdf</h3></caption>
+        <thead>
+            <tr>
+                <th>q</th>
+                <th>w</th>
+                <th>e阿飞发</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>wwd</td>
+                <td>dddda</td>
+                <td>wdddaad</td>
+            </tr>
+            <tr>
+                <td>dadd</td>
+                <td>dadada</td>
+                <td>dasdada</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>12</td>
+                <td>32</td>
+                <td>33</td>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- 链接伪类选择器a:link,visitede,hover,active 且不能打断顺序-->
+    
+</body>
+</html>

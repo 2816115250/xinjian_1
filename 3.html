@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吴曼傻狗</title>
+</head>
+<style>
+    /* 通过父找到子 父代选择器
+    .wumandebaba p{
+        color: red;
+
+    } */
+    /* 只找子  子代选择器*/
+    .wumandebaba>p{
+        color: aqua;
+    }
+    /* 并集选择器 用，隔开 */
+ div,p,.red,span{
+    color: brown;
+ }
+ /*交集选择器 不能隔开 标签选择器必须在前*/
+ h3.red{
+    color: blue;
+ }
+ /* hover伪类选择器 */
+ a.wms{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+
+ }
+ a.wms:hover{
+    text-decoration: none;
+    color: rgb(59, 33, 189);
+    font-weight: 700;
+ }
+ .wm{
+    background-color: aqua;
+   width: 1500px;
+    height: 1500px;
+    margin: 0 auto;
+    /* 设置背景图片 bgi */
+    background-image: url("./QQ火1.jpg");
+    /* 设置背景图片平不平铺 bgr */
+    background-repeat: no-repeat;
+    /* 背景位置设置 bgp*/
+    background-position: center center;
+ }
+ /* 转换块级元素display:block,行块内元素display:inline-block */
+ /* a{
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    display: block;
+ } */
+
+</style>
+<body>
+    <div class="wumandebaba">
+        <p>
+            dddd
+        </p>
+       <div> <p>
+        qqqq
+    </p></div>
+    </div>
+    <p> sdhd</p>
+    <h1 class="red">dsdsd</h1>
+    <span>dsdsd</span>
+    <div>asddsdsd</div>
+    <h2>sd</h2>
+    <h3 class="red">ee</h3>
+    <a href="http://www.baidu.com" target="_blank">吴曼</a>
+    <div class="wm">
+         aaa
+    </div>
+    <img src="./QQ火1.jpg" alt="">
+    <!-- 块级元素能改变宽高 display :block -->
+    <!-- 行内元素不能改变宽高display：inline -->
+    <!-- 行内块元素可以改变宽高display：inlin-block -->
+    <!-- 元素显示模式转换 -->
+    <a href="#" class="wms">  网页转换</a>
+    <!-- p标签不能嵌套块级元素block -->
+    <!-- !important最高优先级，不能提升继承优先级 -->
+     <!-- 07pxcook的基本使用 -->
+</body>
+</html>

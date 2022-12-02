@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            /* width: 400px; */
+            height: 40px;
+            background-color:skyblue;
+            /* 给盒子设置边框属性 */
+            /* 设置边框样式,只有设置边框样式后才可以设置边框粗细，颜色等 */
+            border-style: solid;
+            /* 设置边框粗细 */
+            border-width: 2px;
+            /* 设置边框颜色 */
+            border-color: brown;
+            /* 边框单方向设置 borde-方向*/
+            border-top: 3px solid green;
+            border-bottom: 1px solid green;
+            /* 内边距取值padding取值 */
+            padding-top: 10px;
+            /* 自动内减  如果设置 box-sizing: border-box;其实就是设置了盒子的大小*/
+            box-sizing: border-box;
+            /* 外边框的取值margin */
+            /* margin: 10px; */
+        }
+        a{
+            /* width: 80px; */
+            height: 24px;
+            display: inline-block;
+            background-color: red;
+            color: rgba(24, 15, 15, 0.816);
+            text-decoration: none;
+            text-align: center;
+            /* 与盒子行高相同时字体居中 */
+            line-height: 24px;
+            font-size: 12px;
+            padding:0px 40px;
+        }
+        /*清除默认的margin和padding的间隙.margin在水平方向的距离相互叠加，垂直方向取距离大的值 */
+        /* 子元素的margin-top会让父元素下移。解决margin塌陷方法1.只有对父元素设置padding，border，或者内容 */
+        /* 2.overflow:hidden; */
+        /* 3.display:inline-block */
+        /* 4.float:left */
+        /* 行内元素水平方向margin和padding有效,块级元素margin和padding且不能撑大父元素。垂直方向无效，可以撑大父元素 */
+        
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            width: 300px;
+            height: 300px;
+            background-color:blue;
+        }
+        /* :list-child
+        :last-child
+        :nth-child(n)  */
+        /* ::before在父元素最前面添加元素 ：：after在父元素的最后面添加元素*/
+
+        .father::before{
+            /* 伪元素必加内容content： */
+            content: "吴曼吾儿";
+            font-size: 20px;
+            font-style: italic;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: 700;
+            display: block;
+            height: 200px;
+            background-color: orange;
+            /* 浮动float：用于图文环绕。网页布局*/
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#" target="_blank">1导航</a>
+        <a href="#" target="_blank">2导航</a>
+        <a href="http://www.ddgdhgdh.com" target="_blank">3导航</a>
+            <a href="https://jinapdf.com/" target="_top">4导航</a>
+    </div>
+    <div class="father"></div>
+</body>
+<!-- 浮动特点08 -->
+</html>

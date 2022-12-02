@@ -1,0 +1,70 @@
+<!-- doctype 文档的类型声明 -->
+<!DOCTYPE html>
+<!-- 标识网页的语言 -->
+<html lang="zh-CN">
+<head>
+    <!-- 标识网页使用的字符编码 防止出现乱码 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- description网页描述标签 -->
+    <!-- keywords网页关键词标签 -->
+    <!-- header网页头部 nav网页导航 footer网页底部 aside网页侧边栏 section网页的区块 article 网页文章标签 -->
+    <!-- ico图标设置 -->
+    <link rel="shortcut icon" href="./QQ火1.jpg"  type="image/x-icon">
+    <style>
+        .box{
+           /* 设置所选图片宽高
+           weight: 0;
+           height: auto;
+           /* 添加背景图片地址 bgi*/
+           /* 设置背景图片位置*/
+           /* background-position: 0 0;  */
+           /* 设置背景图片大小 */
+           width: 600px;
+           height: 500px;
+            border: 1px solid black;
+           background-image: url("./QQ火1.jpg");
+           background-repeat: no-repeat;
+           /* background-size: 400px 500px; */
+           /* 不会超出盒子最大 */
+           background-size: contain;
+           /*等比例缩放，不留空白  */
+           /* background-size: cover; */
+        }
+        .text{
+            width: 400px;
+            height: 400px;
+            background-color: green;
+            /* 盒子阴影设置水平 垂直 清晰度 阴影扩大 颜色 inset将阴影改为内部 */
+            box-shadow: 20px 20px 1px 1px red inset;
+            margin: 20px auto;
+            font-style: italic;
+            font-size: 50px;
+            text-align: center;
+            line-height: 400px;
+            /* 文字阴影水平 垂直 清晰度 颜色 阴影可叠加*/
+            text-shadow: 30px 40px 0px red,
+            30px 60px 4px blue;
+            /* 设置过度时间 all设置所有属性过度时间 */
+            /* 在hover设置不会出现回过度 */
+            transition: width 3s,background-color 7s,height 3s;
+        }
+        .text:hover{
+            width: 300px;
+            height: 200px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- 精灵图的制作 -->
+    <div class="box">
+    </div>
+    <!-- 文字阴影设置 -->
+    <div class="text">吴曼吾儿</div>
+    <!-- 盒子阴影设置box-shadow -->
+    <!-- 过度transition让元素样式慢慢变化 -->
+</body>
+</html>

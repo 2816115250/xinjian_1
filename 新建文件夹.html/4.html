@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form>
+      <!-- plachholder提示文本填写内容 -->
+  昵称：<input type="text" placeholder="吴曼爸爸"><br>
+  密码： <input type="password"><br>
+  <!-- name让单选挎框radio只有一个属性名，checked默认单选 -->
+  性别：<input type="radio" name="sex" checked>男
+  <input type="radio" name="sex">女 <br>
+  <!-- lable标签的两种使用方法 1、通过id进行选择 2、通过包裹进行选择 -->
+  爱好：<input type="checkbox" checked id="1"> <label for="1">qq </label>
+      <label> <input type="checkbox">wx</label>
+ 选择文件：<input type="file" multiple>
+ <!-- 普通按钮 -->
+ <input type="button" value="普通按钮显示属性"><br>
+ <!-- 提交按钮 -->
+ <input type="submit"><br>
+ <!-- 重置按钮 -->
+ <input type="reset"><br>
+  </form>
+   <form >
+    <button type="submit">fcyt</button>
+    <button type="reset">fg</button>
+    <button type="button">sdds</button>
+    <!-- select下拉标签 option下拉菜单每一项-->
+    <!-- 下拉菜单默认选项selected-->
+    所在城市：<select >
+        <option>1</option>
+        <option selected>2</option>
+    </select><br>
+    <!-- 文本域标签textarea cols文本行数 rows文本列数-->
+    <textarea cols="30" rows="10"></textarea>
+   </form>
+   <!-- 没有语义的标签 -->
+   <!-- div独占一行 -->
+   <!--span一行多个 -->
+   <div>1</div>
+   <div>1</div>
+   <span>2</span>
+   <span>2</span>
+   <!-- 有语义标签 -->
+   <!-- 网页头部标签 -->
+   <header>tou</header>
+   <nav>网页的导航</nav>
+   <footer>网页底部</footer>
+   <aside>网页侧边框</aside>
+   <section>网页区块</section>
+   <article>网页的文章</article>
+   <!-- 设置name值可以让后端知道对应valu属性意义 -->
+   <input type="text" placeholder="111" value="cnm" name="nickname">
+   <!-- 字符实体 -->
+   <!-- HTML空格多个实现 &nbsp;  小于号&lt; 大于号&gt;-->
+122e &nbsp;&nbsp;&nbsp;&nbsp;22333 <br>
+&lt;p&gt;&lt;p&gt;
+生日：<input type="date">
+时间：<input type="time"></body>
+<style>
+   
+</style>
+</html>
